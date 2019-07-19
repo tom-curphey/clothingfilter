@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+const images = require.context('../../images/', true);
 
 const Item = styled.li`
   list-style-type: none;
@@ -29,6 +30,7 @@ const SalesBadge = styled.div`
     color: #fff;
   }
 `;
+
 // Define what backgroundColor theme will look like
 const theme = {
   backgroundColor: 'transparent'
@@ -51,6 +53,10 @@ const ProductDetails = styled.div`
 `;
 
 const ProductItem = ({ product }) => {
+  let imageUrl = images(`./${product.productImage}`);
+
+  // TODO: Check if image was found, if it wasn't set default image
+
   let SalesBadgeLabel = <SalesBadge />;
   // Will it ever be both?
   if (product.isExclusive) {
@@ -71,7 +77,7 @@ const ProductItem = ({ product }) => {
   return (
     <Item>
       <Image>
-        <img src="https://placeimg.com/500/500/any" alt="any" />
+        <img src={imageUrl} alt="any" />
       </Image>
       {SalesBadgeLabel && SalesBadgeLabel}
       <ProductDetails>

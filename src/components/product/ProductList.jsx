@@ -31,7 +31,7 @@ const ProductList = ({ product }) => {
       content = <p>No Products were found</p>;
     } else {
       let ProductItems = product.products.map(p => {
-        return <ProductItem product={p} />;
+        return <ProductItem product={p} key={p.index} />;
       });
 
       content = <Products>{ProductItems}</Products>;
