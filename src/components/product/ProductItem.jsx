@@ -26,6 +26,7 @@ const SalesBadge = styled.div`
     display: inline-flex;
     align-items: center;
     padding: 0px 22px;
+    color: #fff;
   }
 `;
 // Define what backgroundColor theme will look like
@@ -35,14 +36,16 @@ const theme = {
 
 const ProductDetails = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, auto);
+  margin-top: 10px;
+  grid-gap: 10px;
 
   span:first-child {
-    font-size: 24px;
+    font-size: 20px;
   }
 
   span:last-child {
-    font-size: 36px;
+    font-size: 30px;
     text-align: right;
   }
 `;
