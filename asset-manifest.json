@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/clothingfilter/static/css/main.2cce8147.chunk.css",
+    "main.js": "/clothingfilter/static/js/main.db7cef58.chunk.js",
+    "main.js.map": "/clothingfilter/static/js/main.db7cef58.chunk.js.map",
+    "runtime~main.js": "/clothingfilter/static/js/runtime~main.2c268da0.js",
+    "runtime~main.js.map": "/clothingfilter/static/js/runtime~main.2c268da0.js.map",
+    "static/js/2.b41502e9.chunk.js": "/clothingfilter/static/js/2.b41502e9.chunk.js",
+    "static/js/2.b41502e9.chunk.js.map": "/clothingfilter/static/js/2.b41502e9.chunk.js.map",
+    "index.html": "/clothingfilter/index.html",
+    "precache-manifest.9291590e0d585cdd55a5a66c381f988c.js": "/clothingfilter/precache-manifest.9291590e0d585cdd55a5a66c381f988c.js",
+    "service-worker.js": "/clothingfilter/service-worker.js",
+    "static/css/main.2cce8147.chunk.css.map": "/clothingfilter/static/css/main.2cce8147.chunk.css.map",
+    "static/media/logo.svg": "/clothingfilter/static/media/logo.5d5d9eef.svg"
+  }
+}
