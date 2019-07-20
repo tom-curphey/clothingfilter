@@ -11,6 +11,8 @@ const Item = styled.li`
 
 const Image = styled.div`
   margin: 10px;
+  display: flex;
+  justify-content: center;
 
   img {
     height: auto;
