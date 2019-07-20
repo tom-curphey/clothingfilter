@@ -1,9 +1,9 @@
-import { LOADED_PRODUCTS } from '../../redux/types';
+import { LOADED_PRODUCTS, SET_PRODUCT_SIZE } from '../../redux/types';
 
 const initialState = {
   products: null,
-  loading: true,
-  user: null
+  selectedSize: 'default',
+  loading: true
 };
 
 export default function(state = initialState, action) {
@@ -15,6 +15,13 @@ export default function(state = initialState, action) {
         ...state,
         loading: false,
         products: payload
+      };
+
+    case SET_PRODUCT_SIZE:
+      return {
+        ...state,
+        loading: false,
+        selectedSize: payload
       };
 
     default:

@@ -6,6 +6,7 @@ const Item = styled.li`
   list-style-type: none;
   border: 1px solid #f1f1f1;
   padding: 10px;
+  padding-bottom: 30px;
 `;
 
 const Image = styled.div`
@@ -58,7 +59,7 @@ const ProductItem = ({ product }) => {
   // TODO: Check if image was found, if it wasn't set default image
 
   let SalesBadgeLabel = <SalesBadge />;
-  // Will it ever be both?
+  // Will there ever be more than one Sales Badge per product?
   if (product.isExclusive) {
     SalesBadgeLabel = (
       <SalesBadge theme={{ backgroundColor: 'green' }}>

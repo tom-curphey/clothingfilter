@@ -22,24 +22,42 @@ const Products = styled.ul`
   }
 `;
 
-const ProductList = ({ product }) => {
-  console.log('Hit me', product);
+const Loading = styled.p`
+  font-size: 20px;
+  text-align: center;
+  margin: 120px 0px;
+`;
 
+const ProductList = ({ product }) => {
+  // Create a content variable to change the content based selected products
   let content;
   if (!product.loading) {
     if (isEmpty(product.products)) {
       content = <p>No Products were found</p>;
     } else {
-      let ProductItems = product.products.map(p => {
+      // Loop through products and find the products that have the selected size
+      let filteredProducts = product.products.filter(fp => {
+        return fp.size.some(size => {
+          return size === product.selectedSize;
+        });
+      });
+
+      // If filtered products is empty set the filtered products to all products as a default
+      // So when the page first loads all the products display
+      if (isEmpty(filteredProducts)) {
+        filteredProducts = product.products;
+      }
+
+      let ProductItems = filteredProducts.map(p => {
         return <ProductItem product={p} key={p.index} />;
       });
 
       content = <Products>{ProductItems}</Products>;
     }
   } else {
-    content = <p>Loading</p>;
+    // Inform the user that the products are loading
+    content = <Loading>Loading..</Loading>;
   }
-
   return content;
 };
 

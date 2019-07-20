@@ -1,1 +1,2 @@
 export const LOADED_PRODUCTS = 'LOADED_PRODUCTS';
+export const SET_PRODUCT_SIZE = 'SET_PRODUCT_SIZE';
