@@ -2,5 +2,6 @@
 
 ### Start App
 
-1. Clone app
-2. Yarn Start
+1. `git clone https://github.com/tom-curphey/clothingfilter.git`
+2. `yarn install`
+3. `yarn start`
