@@ -1,7 +1,16 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { getSelectedProductSize } from './productActions';
-import { isEmpty } from '../../utils';
+import styled from 'styled-components';
+
+const Form = styled.form`
+  display: flex;
+  align-items: center;
+
+  select {
+    width: 150px;
+  }
+`;
 
 const ProductFilter = ({ product, getSelectedProductSize }) => {
   let productSizeOptions;
@@ -52,16 +61,6 @@ const ProductFilter = ({ product, getSelectedProductSize }) => {
         Filter by size
       </option>
     );
-
-    // if (selectedOptionCheck) {
-    //   productSizeOptions.unshift(
-    //     <option value="" disabled>
-    //       Filter by size
-    //     </option>
-    //   );
-    // } else {
-
-    // }
   } else {
     // TODO: Display loading spinner?
   }
@@ -69,22 +68,14 @@ const ProductFilter = ({ product, getSelectedProductSize }) => {
   console.log('product.selectedSize', product.selectedSize);
 
   return (
-    <form>
+    <Form>
       <select
         value={product.selectedSize}
         onChange={getSelectedProductSize}
       >
         {productSizeOptions && productSizeOptions}
-        {/* <option value="0" disabled>
-          Filter By Size
-        </option>
-        ;<option value="XS">Extra Small</option>;
-        <option value="S">Small</option>;
-        <option value="M">Medium</option>;
-        <option value="L">Large</option>;
-        <option value="XL">Extra Large</option>; */}
       </select>
-    </form>
+    </Form>
   );
 };
 
